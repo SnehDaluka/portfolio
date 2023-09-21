@@ -1,6 +1,7 @@
 import Card from "@components/Card";
 import React from "react";
 import data, { ProjectType } from "@data/projectData";
+import { v4 as uuidv4 } from "uuid";
 
 const Projects = () => {
   return (
@@ -16,6 +17,7 @@ const Projects = () => {
           {data.map((project: ProjectType) => {
             return (
               <Card
+                key={uuidv4()}
                 id={project.id}
                 title={project.title}
                 imgsrc={project.imgsrc}

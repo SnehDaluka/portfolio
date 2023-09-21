@@ -1,5 +1,6 @@
 import Icons from "@components/Icons";
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const Skills = () => {
   const icons1: string[] = [
@@ -44,22 +45,22 @@ const Skills = () => {
       <div className="w-[100%] flex justify-center py-10 h-[50%] skills relative">
         <div className="skills_set">
           {icons1.map((icon) => {
-            return <Icons imgsrc={icon} />;
+            return <Icons key={uuidv4()} imgsrc={icon} />;
           })}
         </div>
         <div className="skills_set">
           {icons2.map((icon) => {
-            return <Icons imgsrc={icon} />;
+            return <Icons key={uuidv4()} imgsrc={icon} />;
           })}
         </div>
         <div className="skills_set">
           {icons3.map((icon) => {
-            return <Icons imgsrc={icon} />;
+            return <Icons key={uuidv4()} imgsrc={icon} />;
           })}
         </div>
         <div className="skills_set">
           {icons4.map((icon) => {
-            return <Icons imgsrc={icon} />;
+            return <Icons key={uuidv4()} imgsrc={icon} />;
           })}
         </div>
       </div>

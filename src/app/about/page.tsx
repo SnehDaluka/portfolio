@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
 
 const About = () => {
   return (
@@ -26,7 +24,7 @@ const About = () => {
           <span className="text-purple-500 font-medium">Sneh Kumar Daluka</span>
           , I am a{" "}
           <span className="text-purple-500 font-medium">Web Developer</span>,
-          and I'm very passionate and dedicated to my work. I have acquired the
+          and I am very passionate and dedicated to my work. I have acquired the
           skills and knowledge necessary to make your project a success.
         </p>
 
