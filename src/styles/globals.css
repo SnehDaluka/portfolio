@@ -96,7 +96,7 @@
 
 /* Skills */
 .skills_set {
-  @apply max-sm:w-[75%] sm:max-lg:w-[60%] lg:max-xl:w-[52%] xl:w-[38.5%] flex items-center gap-16 justify-center flex-wrap;
+  @apply sm:max-lg:w-[60%] lg:max-xl:w-[52%] xl:w-[38.5%] flex items-center max-sm:gap-8 sm:gap-16 justify-center flex-wrap;
 }
 
 .skills > .skills_set {

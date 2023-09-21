@@ -42,7 +42,7 @@ const Skills = () => {
           <span className="nav_heading">Skills</span>
         </h1>
       </div>
-      <div className="w-[100%] flex justify-center py-10 h-[50%] skills relative">
+      <div className="w-[100%] flex justify-center py-10 h-[60%] skills">
         <div className="skills_set">
           {icons1.map((icon) => {
             return <Icons key={uuidv4()} imgsrc={icon} />;
