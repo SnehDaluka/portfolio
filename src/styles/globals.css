@@ -71,7 +71,7 @@
 }
 
 .home_button {
-  @apply bg-white text-black mr-6 my-4 py-2 px-6 text-lg font-inter font-semibold rounded-2xl hover:scale-105 hover:border-white hover:border hover:text-white hover:bg-slate-900  hover:drop-shadow-[7px_-7px_5px_rgba(147,51,234,0.3)] active:bg-white active:text-black;
+  @apply bg-white text-black mr-6 my-4 py-2 px-6 text-lg font-inter font-semibold rounded-2xl transition-all duration-500 hover:scale-105 hover:border-white hover:border hover:text-white hover:bg-slate-900  hover:drop-shadow-[7px_-7px_5px_rgba(147,51,234,0.3)] active:bg-white active:text-black;
 }
 
 /* About */

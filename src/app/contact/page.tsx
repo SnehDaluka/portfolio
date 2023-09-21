@@ -9,6 +9,7 @@ const Contact = () => {
     phone: "",
     message: "",
   });
+  const [load, setLoad] = useState(false);
   const [sent, setSent] = useState(false);
 
   const handleChange = (e: any) => {
@@ -18,8 +19,10 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     try {
+      setLoad(true);
       const response = await fetch("/api/message", {
         method: "POST",
         body: JSON.stringify({
@@ -31,7 +34,7 @@ const Contact = () => {
       });
 
       const data1 = await response.json();
-
+      setLoad(false);
       if (response.ok) {
         setData({
           name: "",
@@ -39,7 +42,7 @@ const Contact = () => {
           phone: "",
           message: "",
         });
-        alert("Message Sent");
+        setSent(true);
       }
     } catch (error) {
       console.log(error);
@@ -127,7 +130,16 @@ const Contact = () => {
             </div>
           </div>
           <div className="bg-white text-black h-[100%] lg:w-[60%] m-4 rounded-lg animate-show_right p-5 py-8">
-            <form className="min-h-[100%] w-[100%]" onSubmit={handleSubmit}>
+            <form
+              className="min-h-[100%] w-[100%]"
+              onSubmit={handleSubmit}
+              onClick={() => setSent(false)}
+            >
+              {sent && (
+                <div className="bg-sky-300 rounded-md px-5 p-2 mx-3 mt-2 mb-4 tracking-wide text-blue-900 font-medium">
+                  Message Sent
+                </div>
+              )}
               <div className="flex flex-col">
                 <label htmlFor="name" className=" mx-3 font-semibold">
                   Name <span className="text-red-600">*</span>
@@ -189,9 +201,9 @@ const Contact = () => {
               <div className="flex flex-row-reverse">
                 <button
                   type="submit"
-                  className="bg-purple-700 text-white text-lg tracking-wide font-semibold rounded-lg p-3 hover:scale-105 hover:shadow-xl"
+                  className="bg-purple-700 text-white text-lg tracking-wide font-semibold rounded-lg p-3 hover:scale-105 hover:shadow-xl active:scale-100"
                 >
-                  Send Message
+                  {load ? <span>Sending...</span> : "Send Message"}
                 </button>
               </div>
             </form>

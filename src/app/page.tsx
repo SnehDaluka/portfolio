@@ -25,7 +25,9 @@ const Home = () => {
         </h2>
         <div>
           <button className="home_button">
-            <Link href="/about">About Me</Link>
+            <Link href="/about">
+              About Me <i className="fa-solid fa-arrow-right"></i>
+            </Link>
           </button>
         </div>
       </div>
