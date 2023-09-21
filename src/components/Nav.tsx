@@ -106,7 +106,11 @@ const Nav = () => {
       {clicked && (
         <div className="sm:hidden max-sm:px-10">
           <div className=" flex flex-col ">
-            <Link href="/" className="nav_text grey_gradient">
+            <Link
+              href="/"
+              className="nav_text grey_gradient"
+              onClick={handleClick}
+            >
               Home
             </Link>
             <Link
@@ -137,7 +141,6 @@ const Nav = () => {
             >
               Contact
             </Link>
-
             <Link
               href="https://drive.google.com/file/d/1wMt4WSYMORE4pIluTKzA0PUvpg9ICrVZ/view?usp=drive_link"
               className="nav_text grey_gradient"

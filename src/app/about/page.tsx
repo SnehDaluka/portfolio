@@ -89,13 +89,6 @@ const About = () => {
             <span className="px-1 font-bold text-slate-400">Phone:</span>
             <span className="px-1">+91 7544972548</span>
           </div>
-          <div>
-            <button className="home_button">
-              <a href="/resume.pdf" download>
-                <i className="fa-solid fa-download"></i> Resume
-              </a>
-            </button>
-          </div>
         </div>
       </div>
     </div>
