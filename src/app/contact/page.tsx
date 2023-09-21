@@ -1,0 +1,194 @@
+"use client";
+
+import { MessageType } from "@interface/message_type";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+
+const Contact = () => {
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [sent, setSent] = useState(true);
+  const router = useRouter();
+
+  const handleChange = (e: any) => {
+    setData((oldData) => {
+      const { name, value } = e.target;
+      return { ...oldData, [name]: value };
+    });
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const response = await fetch("/api/message", {
+        method: "POST",
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          message: data.message,
+        }),
+      });
+
+      const data1 = await response.json();
+
+      if (response.ok) {
+        // router.push("/contact");
+        setSent(true);
+        setData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+        alert("jwdjah");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  return (
+    <div className="h-[100%]">
+      <div className="w-[100%] h-[20%] animate-show">
+        <h1 className="grey_gradient text-6xl font-bold text-center pt-5 pb-6 drop-shadow-[7px_-7px_5px_rgba(147,51,234,0.3)]">
+          <span className="nav_heading">Contact</span>
+        </h1>
+        <p className="pb-3 text-center text-base text-gray-500 mb-7">
+          Any question or remarks? Just write a message!
+        </p>
+      </div>
+      <div className="w-[100%] h-[80%] flex items-center justify-center">
+        <div className="max-lg:w[90%]  lg:w-[75%] h-[80%] lg:flex items-center my-7 justify-center rounded-lg">
+          <div className=" lg:w-[40%] h-[100%] p-4 rounded-tl-lg rounded-bl-lg animate-show_left">
+            <div className="my-4 text-lg flex items-center">
+              <div className="contact_icons">
+                <i className="fa-solid fa-phone text-purple-700"></i>
+              </div>
+              <div className="ml-4">
+                <p className="text-base">Phone:</p>
+                <p>+91 7544972548</p>
+              </div>
+            </div>
+            <div className="my-4 text-lg flex items-center">
+              <div className="contact_icons">
+                <i className="fa-solid fa-envelope text-purple-700"></i>
+              </div>
+              <div className="ml-4">
+                <p className="text-base">Email:</p>
+                <p>snehdaluka@gmail.com</p>
+              </div>
+            </div>
+            <div className="my-4 text-lg flex items-center">
+              <div className="contact_icons">
+                <i className="fa-solid fa-location-dot text-purple-700"></i>
+              </div>
+              <div className="ml-4">
+                <p className="text-base">Location:</p>
+                <p>Bhopal, Madhya Pradesh, India</p>
+              </div>
+            </div>
+            <div className="px-3">
+              <div className="flex justify-evenly my-7">
+                <a href="#" className="text-2xl mx-4" target="_blank">
+                  <i className="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" className="text-2xl mx-4" target="_blank">
+                  <i className="fa-brands fa-github"></i>
+                </a>
+                <a href="#" className="text-2xl mx-4" target="_blank">
+                  <i className="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#" className="text-2xl mx-4" target="_blank">
+                  <i className="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="#" className="text-2xl mx-4" target="_blank">
+                  <i className="fa-brands fa-facebook"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white text-black h-[100%] lg:w-[60%] m-4 rounded-lg animate-show_right p-5 py-8">
+            <form
+              className="min-h-[100%] w-[100%]"
+              onClick={() => setSent(false)}
+              onSubmit={handleSubmit}
+            >
+              <div className="flex flex-col">
+                <label htmlFor="name" className=" mx-3 font-semibold">
+                  Name <span className="text-red-600">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={data.name}
+                  onChange={handleChange}
+                  className="contact_input"
+                  required
+                />
+              </div>
+              <div className="lg:flex">
+                <div className="flex flex-col lg:w-[50%]">
+                  <label htmlFor="email" className=" mx-3 font-semibold">
+                    Email <span className="text-red-600">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={data.email}
+                    onChange={handleChange}
+                    className="contact_input"
+                    required
+                  />
+                </div>
+                <div className="flex flex-col lg:w-[50%]">
+                  <label htmlFor="phone" className=" mx-3 font-semibold">
+                    Phone Number <span className="text-red-600">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    value={data.phone}
+                    onChange={handleChange}
+                    className="contact_input"
+                    required
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="message" className=" mx-3 font-semibold">
+                  Message <span className="text-red-600">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="message"
+                  name="message"
+                  value={data.message}
+                  onChange={handleChange}
+                  className="contact_input"
+                  required
+                />
+              </div>
+              <div className="flex flex-row-reverse">
+                <button
+                  type="submit"
+                  className="bg-purple-700 text-white text-lg tracking-wide font-semibold rounded-lg p-3 hover:scale-105 hover:shadow-xl"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
