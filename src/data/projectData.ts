@@ -1,4 +1,5 @@
 export type ProjectType = {
+  key?: string;
   id: number;
   title: string;
   imgsrc: string;

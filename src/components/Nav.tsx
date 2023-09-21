@@ -33,6 +33,7 @@ const Nav = () => {
     if (pathname === "/skills") addClass("Skills");
     if (pathname === "/projects") addClass("Projects");
     if (pathname === "/contact") addClass("Contact");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <nav className="lg:flex items-center justify-between w-full lg:mb-4 lg:p-3 lg:px-5 animate-show_top">

@@ -1,6 +1,7 @@
 import { ProjectType } from "@data/projectData";
 import Image from "next/image";
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const Card = (props: ProjectType) => {
   return (
@@ -26,7 +27,10 @@ const Card = (props: ProjectType) => {
       <div className="w-[100%] flex gap-3 my-3 justify-center flex-wrap">
         {props.techused.map((tech: string) => {
           return (
-            <div className="px-3 bg-white text-black font-semibold rounded-lg">
+            <div
+              key={uuidv4()}
+              className="px-3 bg-white text-black font-semibold rounded-lg"
+            >
               {tech}
             </div>
           );
