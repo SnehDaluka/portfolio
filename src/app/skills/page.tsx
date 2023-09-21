@@ -87,9 +87,9 @@ const Skills = () => {
         </h1>
       </div>
       <div className="w-[100%] flex flex-col justify-center my-10 min-h-[60%] skills animate-show">
-        <div className="w-[80%] h-[100%] mx-auto flex justify-center items-center">
+        <div className="max-sm:w-[90%] sm:w-[80%] h-[100%] mx-auto flex justify-center items-center">
           <div
-            className="text-6xl font-thin text-gray-500 hover:cursor-pointer hover:text-white active:text-gray-500"
+            className="max-sm:text-3xl sm:text-6xl font-thin text-gray-500 hover:cursor-pointer hover:text-white active:text-gray-500"
             onClick={handleClick1}
           >
             <i className="fa-solid fa-angle-left"></i>
@@ -124,7 +124,7 @@ const Skills = () => {
           )}
 
           <div
-            className="text-6xl font-thin text-gray-500 hover:cursor-pointer hover:text-white active:text-gray-500"
+            className="max-sm:text-3xl sm:text-6xl font-thin text-gray-500 hover:cursor-pointer hover:text-white active:text-gray-500"
             onClick={handleClick2}
           >
             <i className="fa-solid fa-angle-right"></i>

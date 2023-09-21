@@ -136,8 +136,14 @@ const Contact = () => {
               onClick={() => setSent(false)}
             >
               {sent && (
-                <div className="bg-sky-300 rounded-md px-5 p-2 mx-3 mt-2 mb-4 tracking-wide text-blue-900 font-medium">
-                  Message Sent
+                <div className="bg-sky-200 rounded-md px-5 p-2 mx-3 mt-2 mb-4 flex justify-between tracking-wide text-blue-900 font-medium">
+                  <span>Message Sent</span>
+                  <span
+                    className="cursor-pointer"
+                    onClick={() => setSent(false)}
+                  >
+                    <i className="fa-solid fa-xmark"></i>
+                  </span>
                 </div>
               )}
               <div className="flex flex-col">
