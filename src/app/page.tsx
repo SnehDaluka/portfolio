@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Home = () => {
   return (
-    <div className="w-[100%] min-h-[81vh] md:flex items-center justify-center p-5">
+    <div className="w-[100%] min-h-[100%] md:flex items-center justify-center p-5">
       <div className="md:w-[50%] min-h-[100%] flex items-center justify-center animate-show">
         <div className="image_container m-4 mx-4">
           <Image

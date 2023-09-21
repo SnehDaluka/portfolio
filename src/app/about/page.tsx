@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="w-[100%] min-h-[81vh] md:flex items-center justify-center p-5">
-      <div className="md:w-[40%] min-h-[100%] flex items-center justify-center animate-show">
+    <div className="w-[100%] min-h-[100%] md:flex items-center justify-center p-5">
+      <div className="md:w-[40%] min-h-[100%] flex mt-3 items-center justify-center animate-show">
         <div className="rounded-[100%] m-4 mx-4 hover:scale-110 transition-all duration-1000">
           <Image
             src="/profile/profile-pic.jpg"
@@ -17,7 +17,9 @@ const About = () => {
       </div>
       <div className="md:w-[60%] animate-show_right">
         <h1 className="heading">
-          <span className="blue_gradient font-bold">Sneh Kumar Daluka</span>
+          <span className="blue_gradient font-bold my-4">
+            Sneh Kumar Daluka
+          </span>
         </h1>
         <p className="about_me_p">
           Hi! My name is{" "}

@@ -87,7 +87,7 @@
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(
     0.25turn,
-    rgb(34, 226, 255),
+    rgb(34, 108, 255),
     rgb(208, 0, 255),
     rgba(56, 2, 155, 0)
   );
@@ -96,29 +96,11 @@
 
 /* Skills */
 .skills_set {
-  @apply sm:max-lg:w-[60%] lg:max-xl:w-[52%] xl:w-[38.5%] flex items-center max-sm:gap-8 sm:gap-16 justify-center flex-wrap;
-}
-
-.skills > .skills_set {
-  @apply animate-display;
-  position: absolute;
-  opacity: 0;
-}
-
-.skills_set:nth-child(2) {
-  animation-delay: 3s;
-}
-
-.skills_set:nth-child(3) {
-  animation-delay: 6s;
-}
-
-.skills_set:nth-child(4) {
-  animation-delay: 9s;
+  @apply max-sm:w-[100%] sm:w-[50%] flex items-center mb-5 max-sm:gap-8 sm:gap-16 justify-center flex-wrap animate-show;
 }
 
 .icons {
-  @apply w-[120px] h-[120px] border rounded-3xl border-solid border-white flex items-center justify-center p-5 bg-purple-800;
+  @apply sm:w-[120px] sm:h-[120px] border rounded-3xl border-solid border-white flex items-center justify-center max-sm:p-2 sm:p-5 bg-purple-800 hover:scale-110 hover:drop-shadow-[4px_4px_5px_rgba(147,51,234,0.3)]  transition-all duration-500 hover:cursor-pointer;
 }
 
 /* Contact */
@@ -138,10 +120,6 @@
 .cards_heading {
   @apply w-[100%] flex justify-between items-center border-b-[1px] border-white border-solid;
 }
-
-/* .cards:nth-child(2) {
-  animation-delay: 1s;
-} */
 
 /* Footer */
 .footer {

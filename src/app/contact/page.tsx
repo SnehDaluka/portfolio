@@ -1,7 +1,5 @@
 "use client";
 
-import { MessageType } from "@interface/message_type";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const Contact = () => {
@@ -11,8 +9,7 @@ const Contact = () => {
     phone: "",
     message: "",
   });
-  const [sent, setSent] = useState(true);
-  const router = useRouter();
+  const [sent, setSent] = useState(false);
 
   const handleChange = (e: any) => {
     setData((oldData) => {
@@ -36,15 +33,13 @@ const Contact = () => {
       const data1 = await response.json();
 
       if (response.ok) {
-        // router.push("/contact");
-        setSent(true);
         setData({
           name: "",
           email: "",
           phone: "",
           message: "",
         });
-        alert("jwdjah");
+        alert("Message Sent");
       }
     } catch (error) {
       console.log(error);
@@ -52,7 +47,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-[100%]">
+    <div className="min-h-[100%]">
       <div className="w-[100%] h-[20%] animate-show">
         <h1 className="grey_gradient text-6xl font-bold text-center pt-5 pb-6 drop-shadow-[7px_-7px_5px_rgba(147,51,234,0.3)]">
           <span className="nav_heading">Contact</span>
@@ -95,35 +90,35 @@ const Contact = () => {
               <div className="flex justify-evenly my-7">
                 <a
                   href="https://www.instagram.com/sneh_daluka/"
-                  className="text-2xl mx-4 hover:text-purple-600 hover:scale-110 transition-all duration-300"
+                  className="text-2xl mx-4 hover:text-purple-600 hover:drop-shadow-[4px_4px_5px_rgba(147,51,234,0.3)] hover:scale-110 transition-all duration-300"
                   target="_blank"
                 >
                   <i className="fa-brands fa-instagram"></i>
                 </a>
                 <a
                   href="https://github.com/SnehDaluka"
-                  className="text-2xl mx-4 hover:text-purple-600 hover:scale-110 transition-all duration-300"
+                  className="text-2xl mx-4 hover:text-purple-600 hover:drop-shadow-[4px_4px_5px_rgba(147,51,234,0.3)] hover:scale-110 transition-all duration-300"
                   target="_blank"
                 >
                   <i className="fa-brands fa-github"></i>
                 </a>
                 <a
                   href="https://twitter.com/Sneh_Daluka"
-                  className="text-2xl mx-4 hover:text-purple-600 hover:scale-110 transition-all duration-300"
+                  className="text-2xl mx-4 hover:text-purple-600 hover:drop-shadow-[4px_4px_5px_rgba(147,51,234,0.3)] hover:scale-110 transition-all duration-300"
                   target="_blank"
                 >
                   <i className="fa-brands fa-twitter"></i>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/sneh-daluka-35904b249/"
-                  className="text-2xl mx-4 hover:text-purple-600 hover:scale-110 transition-all duration-300"
+                  className="text-2xl mx-4 hover:text-purple-600 hover:drop-shadow-[4px_4px_5px_rgba(147,51,234,0.3)] hover:scale-110 transition-all duration-300"
                   target="_blank"
                 >
                   <i className="fa-brands fa-linkedin"></i>
                 </a>
                 <a
                   href="https://www.facebook.com/profile.php?id=100069572833323"
-                  className="text-2xl mx-4 hover:text-purple-600  hover:scale-110 transition-all duration-300"
+                  className="text-2xl mx-4 hover:text-purple-600 hover:drop-shadow-[4px_4px_5px_rgba(147,51,234,0.3)] hover:scale-110 transition-all duration-300"
                   target="_blank"
                 >
                   <i className="fa-brands fa-facebook"></i>
@@ -132,11 +127,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="bg-white text-black h-[100%] lg:w-[60%] m-4 rounded-lg animate-show_right p-5 py-8">
-            <form
-              className="min-h-[100%] w-[100%]"
-              onClick={() => setSent(false)}
-              onSubmit={handleSubmit}
-            >
+            <form className="min-h-[100%] w-[100%]" onSubmit={handleSubmit}>
               <div className="flex flex-col">
                 <label htmlFor="name" className=" mx-3 font-semibold">
                   Name <span className="text-red-600">*</span>

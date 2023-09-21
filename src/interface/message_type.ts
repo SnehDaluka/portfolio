@@ -3,4 +3,5 @@ export interface MessageType {
   name: string;
   phone: string;
   message: string;
+  date?: Date;
 }

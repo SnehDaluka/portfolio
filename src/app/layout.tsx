@@ -29,7 +29,7 @@ export default function RootLayout({
           <Nav />
         </header>
         <main className="main">{children}</main>
-        <footer className="mt-auto absolute top-[100%] w-[100%]">
+        <footer className="mt-auto h-[30px] w-[100%]">
           <Footer />
         </footer>
       </body>

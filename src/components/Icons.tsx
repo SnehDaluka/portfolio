@@ -8,7 +8,6 @@ const Icons = (props: any) => {
         width={85}
         height={85}
         alt="icons"
-        // className="m-5"
       ></Image>
     </div>
   );
