@@ -36,7 +36,7 @@ const Skills = () => {
     "github",
   ];
   return (
-    <div className="h-[100%]">
+    <div className="min-h-[100%]">
       <div className="w-[100%] h-[40%] animate-show">
         <h1 className="grey_gradient text-6xl font-bold text-center pt-5 pb-10 drop-shadow-[7px_-7px_5px_rgba(147,51,234,0.3)]">
           <span className="nav_heading">Skills</span>
