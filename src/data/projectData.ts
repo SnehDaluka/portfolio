@@ -62,7 +62,7 @@ const data: ProjectType[] = [
   },
   {
     id: 5,
-    title: "Airport Management System",
+    title: "Airport Management",
     imgsrc: "/projects/airport_management_system.jpg",
     description:
       "A Full-stack Web Application which efficiently manages the airport tickets data ",

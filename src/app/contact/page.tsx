@@ -95,35 +95,35 @@ const Contact = () => {
               <div className="flex justify-evenly my-7">
                 <a
                   href="https://www.instagram.com/sneh_daluka/"
-                  className="text-2xl mx-4"
+                  className="text-2xl mx-4 hover:text-purple-600 hover:scale-110 transition-all duration-300"
                   target="_blank"
                 >
                   <i className="fa-brands fa-instagram"></i>
                 </a>
                 <a
                   href="https://github.com/SnehDaluka"
-                  className="text-2xl mx-4"
+                  className="text-2xl mx-4 hover:text-purple-600 hover:scale-110 transition-all duration-300"
                   target="_blank"
                 >
                   <i className="fa-brands fa-github"></i>
                 </a>
                 <a
                   href="https://twitter.com/Sneh_Daluka"
-                  className="text-2xl mx-4"
+                  className="text-2xl mx-4 hover:text-purple-600 hover:scale-110 transition-all duration-300"
                   target="_blank"
                 >
                   <i className="fa-brands fa-twitter"></i>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/sneh-daluka-35904b249/"
-                  className="text-2xl mx-4"
+                  className="text-2xl mx-4 hover:text-purple-600 hover:scale-110 transition-all duration-300"
                   target="_blank"
                 >
                   <i className="fa-brands fa-linkedin"></i>
                 </a>
                 <a
                   href="https://www.facebook.com/profile.php?id=100069572833323"
-                  className="text-2xl mx-4"
+                  className="text-2xl mx-4 hover:text-purple-600  hover:scale-110 transition-all duration-300"
                   target="_blank"
                 >
                   <i className="fa-brands fa-facebook"></i>

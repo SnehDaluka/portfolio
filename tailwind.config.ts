@@ -28,7 +28,7 @@ const config: Config = {
         show_left: "show_left 2s ease-in-out 1",
         show_top: "show_top 1.5s ease-in-out 1",
         show_down: "show_down 1.5s ease-in-out 1",
-        display: "display 20s infinite",
+        display: "display 12s infinite",
       },
       keyframes: {
         move: {

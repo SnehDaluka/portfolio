@@ -3,7 +3,7 @@ import Image from "next/image";
 const About = () => {
   return (
     <div className="w-[100%] min-h-[81vh] md:flex items-center justify-center p-5">
-      <div className="md:w-[50%] min-h-[100%] flex items-center justify-center animate-show">
+      <div className="md:w-[40%] min-h-[100%] flex items-center justify-center animate-show">
         <div className="rounded-[100%] m-4 mx-4 hover:scale-110 transition-all duration-1000">
           <Image
             src="/profile/profile-pic.jpg"
@@ -15,7 +15,7 @@ const About = () => {
           />
         </div>
       </div>
-      <div className="md:w-[50%] animate-show_right">
+      <div className="md:w-[60%] animate-show_right">
         <h1 className="heading">
           <span className="blue_gradient font-bold">Sneh Kumar Daluka</span>
         </h1>
@@ -29,58 +29,56 @@ const About = () => {
         </p>
 
         <div className="lg:flex flex-wrap font-inter text-lg tracking-wide">
-          <div className="lg:w-[50%] flex py-2">
+          <div className="lg:w-[50%] flex py-2 my-2">
             <span className="px-1 text-purple-600">
               <i className="fa-solid fa-gift"></i>
             </span>
             <span className="px-1 font-bold text-slate-400">Birthday: </span>
             <span className="px-1">26.09.2002</span>
           </div>
-          <div className="lg:w-[50%] flex py-2">
+          <div className="lg:w-[50%] flex py-2 my-2">
             <span className="px-1 text-purple-600">
               <i className="fa-solid fa-calendar-days"></i>
             </span>
             <span className="px-1 font-bold text-slate-400">Age: </span>
             <span className="px-1">{new Date().getFullYear() - 2002}</span>
           </div>
-          <div className="lg:w-[50%] flex py-2">
+          <div className="lg:w-[50%] flex py-2 my-2">
             <span className="px-1 text-purple-600">
               <i className="fa-solid fa-location-dot"></i>
             </span>
             <span className="px-1 font-bold text-slate-400">Location:</span>
             <span className="px-1">Bhopal, Madhya Pradesh, India</span>
           </div>
-          <div className="lg:w-[50%] flex py-2">
+          <div className="lg:w-[50%] flex py-2 my-2">
             <span className="px-1 text-purple-600">
               <i className="fa-solid fa-gamepad"></i>
             </span>
             <span className="px-1 font-bold text-slate-400">Interests:</span>
             <span className="px-1">Reading, Video Games</span>
           </div>
-          <div className="lg:w-[50%] flex py-2">
+          <div className="lg:w-[50%] flex py-2 my-2">
             <span className="px-1 text-purple-600">
               <i className="fa-solid fa-user-graduate"></i>
             </span>
             <span className="px-1 font-bold text-slate-400">Study:</span>
-            <span className="px-1">
-              Indian Institute of Information Technology, Bhopal
-            </span>
+            <span className="px-1">IIIT Bhopal</span>
           </div>
-          <div className="lg:w-[50%] flex py-2">
+          <div className="lg:w-[50%] flex py-2 my-2">
             <span className="px-1 text-purple-600">
               <i className="fa-solid fa-graduation-cap"></i>
             </span>
             <span className="px-1 font-bold text-slate-400">Degree:</span>
             <span className="px-1">B. Tech.</span>
           </div>
-          <div className="lg:w-[50%] flex py-2">
+          <div className="lg:w-[50%] flex py-2 my-2">
             <span className="px-1 text-purple-600">
               <i className="fa-solid fa-envelope"></i>
             </span>
             <span className="px-1 font-bold text-slate-400">Mail:</span>
             <span className="px-1">snehdaluka@gmai.com</span>
           </div>
-          <div className="lg:w-[50%] flex py-2">
+          <div className="lg:w-[50%] flex py-2 my-2">
             <span className="px-1 text-purple-600">
               <i className="fa-solid fa-phone"></i>
             </span>
