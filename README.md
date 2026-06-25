@@ -1,34 +1,99 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sneh Kumar Daluka — Portfolio
 
-## Getting Started
+A modern, responsive developer portfolio built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. It showcases my experience, projects, skills, and competitive programming achievements with a glassmorphism design and smooth animations.
 
-First, run the development server:
+🔗 **Live:** [https://github.com/SnehDaluka/portfolio](https://github.com/SnehDaluka/portfolio)
+
+---
+
+## ✨ Features
+
+- **Animated hero** with a rotating gradient ring around the profile image, typed role cycling, and a stats strip
+- **Glassmorphism UI** with a violet → indigo → cyan accent palette and ambient background glows
+- **Scroll progress bar** that tracks reading position across the page
+- **Experience timeline** with an "Active" indicator on the current role
+- **Skills grid** with per-technology brand icons in their native colors
+- **Featured project layout** — a wide highlight card plus a responsive grid
+- **Competitive programming & certifications** section with platform ratings
+- **Contact form** (Formspree-ready) with status feedback
+- Fully **responsive** and accessible, with a sticky navbar, active-section highlighting, and a mobile menu
+
+---
+
+## 🛠️ Tech Stack
+
+| Category   | Technologies                                  |
+| ---------- | --------------------------------------------- |
+| Framework  | Next.js 13 (App Router)                       |
+| Language   | TypeScript                                    |
+| Styling    | Tailwind CSS, custom CSS design tokens        |
+| Animation  | Framer Motion                                 |
+| Icons      | React Icons                                   |
+| Deployment | Vercel                                        |
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+# install dependencies
+npm install
+
+# start the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| Command         | Description                       |
+| --------------- | --------------------------------- |
+| `npm run dev`   | Start the development server      |
+| `npm run build` | Create an optimized production build |
+| `npm run start` | Run the production build          |
+| `npm run lint`  | Run ESLint                        |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+portfolio/
+├── public/
+│   ├── icons/         # tech-stack icons
+│   ├── profile/       # profile images
+│   ├── projects/      # project screenshots
+│   └── resume/        # downloadable resume PDF
+└── src/
+    ├── app/           # Next.js App Router (layout, page, metadata)
+    ├── components/
+    │   ├── Navbar.tsx
+    │   ├── Footer.tsx
+    │   ├── ScrollProgress.tsx
+    │   └── sections/  # Hero, About, Experience, Skills, Projects, Achievements, Contact
+    ├── data/
+    │   └── portfolioData.ts   # all content centralized here
+    └── styles/
+        └── globals.css        # design system & component classes
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ✏️ Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+All content lives in [`src/data/portfolioData.ts`](src/data/portfolioData.ts) — personal info, experience, skills, projects, and achievements. Edit that single file to update the site; the design system tokens (colors, gradients, shadows) are defined at the top of [`src/styles/globals.css`](src/styles/globals.css).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+To enable the contact form, replace `YOUR_FORM_ID` in [`src/components/sections/Contact.tsx`](src/components/sections/Contact.tsx) with your [Formspree](https://formspree.io) form ID.
+
+---
+
+## 📬 Contact
+
+- **Email:** snehdaluka@gmail.com
+- **LinkedIn:** [sneh-kumar-daluka](https://www.linkedin.com/in/sneh-kumar-daluka-35904b249)
+- **GitHub:** [SnehDaluka](https://github.com/SnehDaluka)
+
+---
+
+Built with ❤️ using Next.js.
