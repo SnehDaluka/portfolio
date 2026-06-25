@@ -189,7 +189,6 @@ export const projects: Project[] = [
       "JWT",
     ],
     github: "https://github.com/SnehDaluka/bookish_bliss",
-    live: "https://bookish-bliss-frontend.vercel.app/",
   },
   {
     id: 2,
@@ -209,17 +208,17 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Promptopia",
+    title: "Prompt Share",
     description:
       "A modern web application built with Next.js for discovering and sharing AI prompts. Features Google OAuth authentication, CRUD operations, and a clean, responsive interface.",
-    image: "/projects/promptopia.png",
+    image: "/projects/prompt_share.png",
     techStack: [
       "Next.js",
       "MongoDB",
       "JavaScript",
       "Tailwind CSS",
     ],
-    github: "https://github.com/SnehDaluka/promptopia_nextjs",
+    github: "https://github.com/SnehDaluka/prompt_share_nextjs",
   },
 ];
 

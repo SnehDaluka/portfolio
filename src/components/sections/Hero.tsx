@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-20 md:pt-24 md:pb-16"
     >
       <div className="section-container w-full">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-20">
@@ -105,6 +105,17 @@ const Hero = () => {
                 {" />"}
               </span>
             </motion.div>
+
+            {/* Tagline */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              className="text-base md:text-lg max-w-xl mb-8 mx-auto lg:mx-0"
+              style={{ color: "var(--text-secondary)" }}
+            >
+              I&apos;m a <span className="font-semibold" style={{ color: "var(--text-primary)" }}>Software Developer</span> who builds scalable web applications and AI-driven solutions.
+            </motion.p>
 
             {/* CTA buttons */}
             <motion.div
@@ -232,10 +243,11 @@ const Hero = () => {
                 }}
               >
                 <Image
-                  src="/profile/mypic.png"
+                  src="/profile/my-pic.png"
                   alt="Sneh Kumar Daluka"
                   fill
                   className="object-cover"
+                  style={{ objectPosition: "50% 18%" }}
                   priority
                 />
               </div>

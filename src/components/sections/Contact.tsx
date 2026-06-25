@@ -32,16 +32,39 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const formspreeEndpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
+
+  const openMailto = () => {
+    const subject = `Portfolio contact from ${formData.name || "a visitor"}`;
+    const body =
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      (formData.phone ? `Phone: ${formData.phone}\n` : "") +
+      `\n${formData.message}`;
+    window.location.href = `mailto:${personalInfo.email}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+  };
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
 
+    if (!formspreeEndpoint) {
+      openMailto();
+      setStatus("success");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+      setTimeout(() => setStatus("idle"), 5000);
+      return;
+    }
+
     try {
-      // Formspree integration — replace YOUR_FORM_ID with your Formspree form ID
-      // Sign up at https://formspree.io and create a form to get your ID
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      const response = await fetch(formspreeEndpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(formData),
       });
 
