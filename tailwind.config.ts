@@ -8,93 +8,56 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      container: {
-        center: true,
-        padding: "15px",
+      fontFamily: {
+        sans: ['"Inter"', "sans-serif"],
+        display: ['"Space Grotesk"', "sans-serif"],
       },
       colors: {
-        accent: "#08E95E",
-      },
-      fontFamily: {
-        satoshi: ["Satoshi", "sans-serif"],
-        inter: ["Inter", "sans-serif"],
+        primary: "#030014",
+        violet: {
+          DEFAULT: "#8b5cf6",
+          dark: "#7c3aed",
+        },
+        indigo: {
+          DEFAULT: "#6366f1",
+        },
+        cyan: {
+          DEFAULT: "#06b6d4",
+        },
       },
       animation: {
-        move: "move 1s ease-in-out infinite alternate",
-        glow_move: "glow_move  1s ease-in-out  infinite alternate",
-        glow: "glow  0.8s ease-in-out  infinite alternate",
-        show: "show 2s ease-in-out",
-        show_right: "show_right 2s ease-in-out 1",
-        show_left: "show_left 2s ease-in-out 1",
-        show_top: "show_top 1.5s ease-in-out 1",
-        show_down: "show_down 1.5s ease-in-out 1",
-        display: "display 12s infinite",
+        "fade-in": "fadeIn 0.6s ease-out forwards",
+        "fade-in-up": "fadeInUp 0.6s ease-out forwards",
+        "fade-in-right": "fadeInRight 0.6s ease-out forwards",
+        "pulse-glow": "pulseGlow 2s ease-in-out infinite",
+        "spin-slow": "spin 8s linear infinite",
+        "spin-reverse": "spinReverse 18s linear infinite",
       },
       keyframes: {
-        move: {
-          "0%": { transform: "tranlateY(10px)" },
-          "100%": { transform: "translateY(-10px)" },
+        spinReverse: {
+          "0%": { transform: "rotate(360deg)" },
+          "100%": { transform: "rotate(0deg)" },
         },
-        show: {
+        fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
-        show_right: {
-          "0%": { opacity: "0", transform: "translate3d(100px,0,0)" },
-          "100%": { opacity: "1", transform: "translate3d(0,0,0)" },
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(30px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        show_left: {
-          "0%": { opacity: "0", transform: "translate3d(-100px,0,0)" },
-          "100%": { opacity: "1", transform: "translate3d(0,0,0)" },
+        fadeInRight: {
+          "0%": { opacity: "0", transform: "translateX(30px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
         },
-        show_top: {
-          "0%": { opacity: "0", transform: "translate3d(0,-30px,0)" },
-          "100%": { opacity: "1", transform: "translate3d(0,0,0)" },
-        },
-        show_down: {
-          "0%": { opacity: "0", transform: "translate3d(0,30px,0)" },
-          "100%": { opacity: "1", transform: "translate3d(0,0,0)" },
-        },
-        glow_move: {
-          "0%": {
-            boxShadow: "-10px 10px 10px rgba(37,99,235,0.5)",
-            transform: "tranlateY(10px)",
-          },
-          "50%": { boxShadow: "-10px 10px 18px rgba(107,33,168,0.5)" },
-          "100%": {
-            boxShadow: "-10px 10px 25px rgba(109,40,217,0.5)",
-            transform: "translateY(-10px)",
-          },
-        },
-        glow: {
-          "0%": { boxShadow: "-10px 10px 10px rgba(168,85,247,0.5)" },
-          "100%": { boxShadow: "-10px 10px 25px rgba(88,28,135,0.5)" },
-        },
-        display: {
-          "0%": {
-            transform: "translateX(200px)",
-            opacity: "0",
-          },
-          "10%": {
-            transform: "translateX(0)",
-            opacity: "1",
-          },
-          "20%": {
-            transform: "translateX(0)",
-            opacity: "1",
-          },
-          "30%": {
-            transform: "translateX(-200px)",
-            opacity: "0",
-          },
-          "100%": {
-            transform: "translateX(-200px)",
-            opacity: "0",
-          },
+        pulseGlow: {
+          "0%, 100%": { boxShadow: "0 0 20px rgba(139, 92, 246, 0.3)" },
+          "50%": { boxShadow: "0 0 40px rgba(139, 92, 246, 0.6)" },
         },
       },
     },
   },
   plugins: [],
 };
+
 export default config;
