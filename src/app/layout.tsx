@@ -43,6 +43,9 @@ export default function RootLayout({
         {/* Dot Grid Overlay */}
         <div className="fixed inset-0 bg-grid pointer-events-none z-0" aria-hidden="true" />
 
+        {/* Film Grain Overlay */}
+        <div className="bg-grain" aria-hidden="true" />
+
         {/* Scroll Progress Bar */}
         <ScrollProgress />
 
