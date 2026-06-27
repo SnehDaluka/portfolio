@@ -90,7 +90,7 @@ export const personalInfo: PersonalInfo = {
     twitter: "https://twitter.com/Sneh_Daluka",
     instagram: "https://www.instagram.com/sneh_daluka/",
   },
-  resumeUrl: "/resume/Sneh_Kumar_Daluka_Resume.pdf",
+  resumeUrl: "https://drive.google.com/file/d/1VKCBXTcVN-JI7GuDAWh0evqgOYbaqvCO/view?usp=sharing",
 };
 
 // ─── Experience ──────────────────────────────────────────────
